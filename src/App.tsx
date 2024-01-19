@@ -6,8 +6,10 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          <Route index element={<div>qweqwe</div>} />
+          <Route index element={<div>home page</div>} />
           <Route path="cart" element={<div>cart</div>} />
+          <Route path="login" element={<div>login</div>} />
+          <Route path="register" element={<div>register</div>} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
