@@ -7,7 +7,7 @@ export const Nav: FC = () => (
     <Logo />
     <ul className="flex gap-[20px] items-center">
       <li>
-        <NavLink to="/">catalog</NavLink>
+        <NavLink to="/">menu</NavLink>
       </li>
       <li>
         <NavLink to="cart">cart</NavLink>

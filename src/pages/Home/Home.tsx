@@ -1,16 +1,13 @@
 import { FC } from "react";
-
-const menu: string[] = ["Pizza", "Burger", "Drink"];
+import { NavLink } from "react-router-dom";
 
 export const Home: FC = () => (
-  <div className="flex">
-    <ul>
-      {menu.map((el) => (
-        <li key={el}>{el}</li>
-      ))}
-    </ul>
-    <ul>
-      <li>Pizza</li>
-    </ul>
+  <div className="container h-[400px] flex items-center justify-center">
+    <NavLink
+      to="menu/pizza"
+      className="border-[1px] py-[8px] px-[16px] rounded-lg"
+    >
+      Зробити замовлення
+    </NavLink>
   </div>
 );
