@@ -9,7 +9,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />
+          <Route index element={<Navigate to="/menu/pizza" />} />
           <Route path="menu" element={<Menu />}>
             <Route path="pizza" element={<Pizza />} />
             <Route path="burgers" element={<div>burgers</div>} />

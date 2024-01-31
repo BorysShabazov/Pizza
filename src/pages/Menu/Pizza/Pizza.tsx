@@ -19,7 +19,7 @@ export const Pizza: FC = () => {
     fetchData();
   }, []);
   return (
-    <ul>
+    <ul className="flex flex-wrap justify-around gap-y-[16px] py-[16px]">
       {pizza.map((el) => (
         <li key={el.id}>
           <ItemCard
