@@ -9,7 +9,7 @@ export const MenuNav: FC = () => (
       <li key={el}>
         <NavLink
           to={el}
-          className="bg-lightgray border-black border-[1px] block py-[8px] px-[16px] rounded-lg text-center hover:bg-gray focus:bg-gray "
+          className="bg-lightgray  block py-[8px] px-[16px] rounded-lg text-center hover:bg-gray focus:bg-gray "
         >
           {el}
         </NavLink>

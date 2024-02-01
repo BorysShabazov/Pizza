@@ -1,8 +1,9 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { SharedLayout } from "./components/SharedLayout/SharedLayout";
-import { Home } from "./pages/Home/Home";
 import { Menu } from "./pages/Menu/Menu";
 import { Pizza } from "./pages/Menu/Pizza/Pizza";
+import { Login } from "./pages/Auth/Login";
+import { Register } from "./pages/Auth/Register";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
             <Route path="drinks" element={<div>drinks</div>} />
           </Route>
           <Route path="cart" element={<div>cart</div>} />
-          <Route path="login" element={<div>login</div>} />
-          <Route path="register" element={<div>register</div>} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
