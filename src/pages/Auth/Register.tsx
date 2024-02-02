@@ -6,9 +6,12 @@ import {
 } from "firebase/auth";
 import { auth } from "../../services/auth";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/Auth/AuthSlice";
 
 export const Register: FC = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleRegForm = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -23,19 +26,11 @@ export const Register: FC = () => {
     const email = (e.currentTarget.email as HTMLInputElement)?.value;
     const password = (e.currentTarget.password as HTMLInputElement)?.value;
 
-    console.log(email, password);
-
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential: UserCredential) => {
         // Signed up
-        const user = userCredential.user;
-        console.log(user);
-        localStorage.setItem(
-          "user",
-          JSON.stringify({
-            email: user.email,
-          })
-        );
+        const { email } = userCredential.user;
+        dispatch(login(email));
 
         navigate("/");
       })

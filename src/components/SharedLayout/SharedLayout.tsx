@@ -5,7 +5,7 @@ import { Header } from "../Header/Header";
 export const SharedLayout: FC = () => (
   <>
     <Header />
-    <main>
+    <main className="pt-[50px]">
       <Outlet />
     </main>
   </>
